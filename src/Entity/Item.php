@@ -273,4 +273,27 @@ class Item
 
         return $this;
     }
+
+    public function fillObject(array $data): self
+    {
+        $this->setEntityId((int) $data['entity_id']);
+        $this->setCategoryName($data['CategoryName']);
+        $this->setSku($data['sku']);
+        $this->setName($data['name']);
+        $this->setDescription($data['description']);
+        $this->setPrice($data['price']);
+        $this->setLink($data['link']);
+        $this->setImage($data['image']);
+        $this->setBrand($data['Brand']);
+        $this->setRating((int) $data['Rating']);
+        $this->setCaffeineType($data['CaffeineType']);
+        $this->setCount((int) $data['Count']);
+        $this->setFlavored((bool) $data['Flavored']);
+        $this->setSeasonal((bool) $data['Seasonal']);
+        $this->setInstock((bool) $data['Instock']);
+        $this->setFacebook($data['Facebook']);
+        $this->setIsKCup((bool) $data['IsKCup']);
+
+        return $this;
+    }
 }
